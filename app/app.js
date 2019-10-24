@@ -28,29 +28,31 @@ function init() {
 	}
 
 	function addStyle(sound) {
-		let activeElem = document.querySelector("."+sound);
+		let activeElem = document.querySelector("."+sound); // let the active element be marked for a while
 		activeElem.classList.add("active");
 		setTimeout(function() {
 			activeElem.classList.remove("active");
-		}, 1000);
+		}, 400);
 	}
 
 	function makeSound(name) { 
 		switch(name) {
 			case "jet": 
 			let sound1 = new Audio("sounds/airplane-mig21.mp3");
+			sound1.volume = .6;
 			sound1.play();
 			break;
 			case "guitar": 
 			let sound2 = new Audio("sounds/electricguitar.mp3");
+			sound2.volume = .4;
 			sound2.play();
 			break;
 			case "traffic": 
 			let sound3 = new Audio("sounds/trafficity.mp3");
+			sound3.volume = .4;
 			sound3.play();
 			break;
 		}
 	}
-
 
 }

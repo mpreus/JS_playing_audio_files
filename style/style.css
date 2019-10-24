@@ -10,9 +10,14 @@ h1 {
 	text-transform: uppercase;
 }
 
+p {
+	text-align: center;
+}
+
 div {
 	background-color: #485960;
 	border-radius: .25rem;
+	box-shadow: 4px 4px 4px 4px #333;
 	color: #fff;
 	cursor: pointer;
 	height: 1.8rem;
@@ -23,5 +28,8 @@ div {
 }
 
 .active {
-	border: 3px dashed red;
+	background: #eee;
+	border: 2px solid #eee;
+	box-shadow: 1px 1px 1px 1px #333;
+	color: #333;
 }

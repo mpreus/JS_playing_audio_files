@@ -1,1 +1,3 @@
 The project enables playing sounds (mp3 files) in the browser window.
+Click the button of your choice to hear the sound according to the name of the button.
+Sound files are stored in the project's folder and played with JS Audio() object.
