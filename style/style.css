@@ -14,10 +14,14 @@ div {
 	background-color: #485960;
 	border-radius: .25rem;
 	color: #fff;
+	cursor: pointer;
 	height: 1.8rem;
 	line-height: 1.8rem;
 	margin: .8rem auto;
 	text-align: center;
 	width: 10rem;
+}
 
+.active {
+	border: 3px dashed red;
 }

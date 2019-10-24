@@ -12,31 +12,40 @@ function init() {
 		const muted = jetsound.muted;
 		console.log(muted); // zwraca: false
 		jetsound.play(); // uruchamia odtwarzanie
-	});*/
+	});
+	*/
 
 	const sounds = document.querySelectorAll(".sound");
-	console.log(sounds); // zwraca pseudotablicę
+	// console.log(sounds); zwraca pseudotablicę
 	for(let i = 0; i < sounds.length; i++) {
-		sounds[i].addEventListener("click", function() {
+		sounds[i].addEventListener("click", function () {
 			let sound = this.innerHTML; // każdy pojedyńczo 'ten' element
 			// console.log(sound); zwraca pseudotablicę z poszczególnymi klasami
 			// - kliknięcie w każdy z elementów zwraca w konsoli jego nazwę
-
+			addStyle(sound); // making active sound element visible
 			makeSound(sound);
 		})
 	}
-	function makeSound(name) {
-		console.log(name); 
+
+	function addStyle(sound) {
+		let activeElem = document.querySelector("."+sound);
+		activeElem.classList.add("active");
+		setTimeout(function() {
+			activeElem.classList.remove("active");
+		}, 1000);
+	}
+
+	function makeSound(name) { 
 		switch(name) {
-			case "Jetplane": 
+			case "jet": 
 			let sound1 = new Audio("sounds/airplane-mig21.mp3");
 			sound1.play();
 			break;
-			case "Guitar": 
+			case "guitar": 
 			let sound2 = new Audio("sounds/electricguitar.mp3");
 			sound2.play();
 			break;
-			case "CityTraffic": 
+			case "traffic": 
 			let sound3 = new Audio("sounds/trafficity.mp3");
 			sound3.play();
 			break;
