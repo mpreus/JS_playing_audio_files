@@ -1,5 +1,6 @@
 html, body {
 	box-sizing: border-box;
+	font-family: 'Roboto Slab', serif;
 	font-size: 20px;
 	margin: 0;
 	padding: 0;
@@ -17,7 +18,7 @@ p {
 div {
 	background-color: #485960;
 	border-radius: .25rem;
-	box-shadow: 4px 4px 4px 4px #333;
+	box-shadow: 4px 4px 4px 2px #444;
 	color: #fff;
 	cursor: pointer;
 	height: 1.8rem;
